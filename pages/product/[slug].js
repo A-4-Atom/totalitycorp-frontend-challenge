@@ -26,7 +26,7 @@ export const ProductDetails = ({ product, products }) => {
         <div>
           <div className="image-container">
             <Image
-              src={urlFor(image && image[index]).url()}
+              src={urlFor(image && image[index]).toString()}
               alt="image of the current viewing product"
               className="product-detail-image"
               width={400}

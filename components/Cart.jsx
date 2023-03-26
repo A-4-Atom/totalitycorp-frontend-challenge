@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import {
   AiOutlineMinus,
@@ -14,7 +14,22 @@ import getStripe from "@/lib/getStripe";
 import Image from "next/image";
 
 const Cart = () => {
-  const cartRef = useRef();
+  const cartRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        setShowCart(false)
+      }
+    };
+  
+    document.addEventListener('mousedown', handleClickOutside);
+  
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  });
+
   const {
     totalPrice,
     totalQuantities,
@@ -43,8 +58,8 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
-      <div className="cart-container">
+    <div className="cart-wrapper" >
+      <div className="cart-container" ref={cartRef}>
         <button
           type="button"
           className="cart-heading"
@@ -57,7 +72,6 @@ const Cart = () => {
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
-            {" "}
             <AiOutlineShopping size={150} />
             <h3>Your Cart is Empty</h3>
             <Link href="/">
@@ -86,7 +100,7 @@ const Cart = () => {
                 <div className="item-desc">
                   <div className="flex top">
                     <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h4>₹{item.price}</h4>
                   </div>
                   <div className="flex bottom">
                     <div>
@@ -99,7 +113,7 @@ const Cart = () => {
                         >
                           <AiOutlineMinus />
                         </span>
-                        <span className="num" onClick="">
+                        <span className="num">
                           {item.quantity}
                         </span>
                         <span
@@ -128,7 +142,7 @@ const Cart = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal</h3>
-              <h3>${totalPrice}</h3>
+              <h3>₹{totalPrice}</h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>

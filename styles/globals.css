@@ -65,8 +65,9 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
-  color: gray;
-  font-size: 18px;
+  color: rgb(85, 85, 85);
+  font-size: 22px;
+  font-weight: 500;
 
 }
 .cart-icon{
@@ -148,7 +149,7 @@ width: 100%;
   color: white;
   border: none;
   margin-top: 40px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   z-index:10000 !important;
@@ -157,6 +158,7 @@ width: 100%;
 .hero-banner-container h3{
   font-size: 4rem;
   margin-top: 4px;
+  margin-left: -10px;
 }
 .hero-banner-container h1{
   color: white;
@@ -167,9 +169,10 @@ width: 100%;
 .hero-banner-image{
   position: absolute;
   top: 0%;
-  right:20%;
+  right: 8%;
   width: 450px;
   height: 450px;
+  z-index: 0;
 }
 
 
@@ -232,8 +235,8 @@ text-align: end;
   color: red;
   border: none;
   margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
   cursor: pointer;
 }
 .banner-desc .left h3{
@@ -336,6 +339,7 @@ text-align: end;
 }
 .product-container{
   margin-top: 15px;
+  margin-left: 10px;
   overflow: auto;
 max-height: 70vh;
 padding: 20px 10px;
@@ -373,7 +377,7 @@ padding: 20px 10px;
 }
 .total h3{
   font-size: 22px;
-
+  margin-left: 10px;
 }
 .remove-item{
   font-size: 24px;
@@ -386,8 +390,8 @@ padding: 20px 10px;
   position: absolute;
   bottom: 12px;
   right: 5px;
-width: 100%;
-padding: 30px 65px;
+  width: 100%;
+  padding: 30px 65px;
 
 }
 
@@ -618,7 +622,11 @@ margin-top: 160px;
   margin-top: 10px;
 }
 
-@media screen and (max-width:800px) {
+@media only screen and (max-width:768px) {
+
+  .beats-solo{
+    margin-left: -20px;
+  }
   .hero-banner-container{
     height: 560px;
   }
@@ -626,15 +634,15 @@ margin-top: 160px;
     width: 77%;
     height: 62%;
     top: -2%;
-    right: -6%;
+    right: -10%;
   }
   .footer-banner-container{
     height: 560px;
     margin-top: 80px;
   }
   .footer-banner-image{
-    width: 77%;
-    left: 30%;
+    width: 70%;
+    left: 40%;
     top: 6%;
     height: 56%
   }
@@ -645,6 +653,12 @@ margin-top: 160px;
   }
   .banner-desc .left p{
     margin:18px;
+  }
+  .banner-desc .left{
+    margin-left: -20px;
+  }
+  .banner-desc .right{
+    margin-left: -20px;
   }
   .banner-desc .right h3{
     font-size: 45px;
@@ -667,6 +681,7 @@ margin-top: 160px;
   }
  .hero-banner-container h3{
     font-size: 40px;
+    margin-left: -20px;
   }
   .hero-banner-container button{
     margin-top: 90px;
@@ -684,17 +699,18 @@ margin-top: 160px;
   }
   .cart-container{
     width: 415px;
-  padding: 4px;
+    padding: 4px;
   }
   .cart-heading{
     margin-top: 35px;
+    margin-left: 35px;
   }
   .product-container{
     margin-top: 10px;
   }
   .product{
     padding: 20px 5px;
-
+    margin-left: 10px;
   }
   .product .cart-product-image{
     width: 25%;
@@ -707,7 +723,7 @@ margin-top: 160px;
     width: 150px;
   }
   .product-detail-container{
-    margin: 20px;
+    margin: 9px;
   }
 
 .item-desc .flex{
