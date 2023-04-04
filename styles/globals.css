@@ -787,4 +787,25 @@ span.text-red {
     width: 80%;
     left: 20%;
   }
+  .cart-heading{
+    margin-left: 70px;
+  }
+  .empty-cart{
+    margin-left: 70px;
+  }
+  .product-container{
+    margin-left: 45px;
+  }
+  .small-images-container{
+    width: 300px;
+  }
+  .image-container{
+    margin-left: -15px;
+  }
+  .cart-bottom{
+    left: 4%;
+  }
+  .banner-desc .left p{
+    margin-left: 1px;
+  }
 }
