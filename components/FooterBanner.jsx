@@ -39,6 +39,7 @@ const FooterBanner = ({
           alt="Photo of Product on Sale"
           width={555}
           height={555}
+          priority
         />
       </div>
     </div>
