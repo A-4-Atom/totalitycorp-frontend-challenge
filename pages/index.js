@@ -21,7 +21,7 @@ export default function Home({ products, bannerData }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
 
@@ -32,5 +32,6 @@ export const getServerSideProps = async () => {
       products,
       bannerData,
     },
+    revalidate: 30
   };
 };

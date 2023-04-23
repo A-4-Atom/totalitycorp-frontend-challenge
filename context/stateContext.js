@@ -29,22 +29,29 @@ export const StateContext = ({ children }) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
     );
-    setTotalPrice((prev) => prev + product.price * quantity);
-    setTotalQuantities((prev) => prev + quantity);
     if (checkProductInCart) {
+      setTotalPrice((prev) => prev + product.price * quantity);
+      setTotalQuantities((prev) => prev + quantity);
+
       const updatedCartItems = cartItems.map((cartProduct) => {
         if (cartProduct._id == product._id)
           return {
             ...cartProduct,
             quantity: cartProduct.quantity + quantity,
           };
+        return cartProduct
       });
       setCartItems(updatedCartItems);
+      toast.success(`${qty} ${product.name} added to the Cart.`);
     } else {
+      setTotalPrice(totalPrice + product.price * quantity);
+      setTotalQuantities(totalQuantities + quantity);
+      // eslint-disable-next-line no-param-reassign
       product.quantity = quantity;
       setCartItems([...cartItems, { ...product }]);
+
+      toast.success(`${qty} ${product.name} added`);
     }
-    toast.success(`${qty} ${product.name} added to the Cart.`);
   }
 
   function onRemove(product){

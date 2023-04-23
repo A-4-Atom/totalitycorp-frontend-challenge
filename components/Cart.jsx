@@ -88,10 +88,10 @@ const Cart = () => {
 
         <div className="product-container">
           {cartItems.length >= 1 &&
-            cartItems.map((item, i) => (
+            cartItems.map((item) => (
               <div className="product" key={item._id}>
                 <Image
-                  src={urlFor(item?.image[0]).url()}
+                  src={urlFor(item?.image[0]).toString()}
                   className="cart-product-image"
                   alt=""
                   width={150}
