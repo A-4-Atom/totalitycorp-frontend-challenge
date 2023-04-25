@@ -34,12 +34,12 @@ const FooterBanner = ({
           </Link>
         </div>
         <Image
-          src={urlFor(image).url()}
+          src={urlFor(image).size(444, 444).url()}
           className="footer-banner-image"
           alt="Photo of Product on Sale"
           width={555}
           height={555}
-          priority
+          priority  
         />
       </div>
     </div>
