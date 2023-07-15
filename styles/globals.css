@@ -28,7 +28,7 @@ a {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 6px 10px;
+  margin: 6px 18px;
   position: relative;
 }
 .marquee-text {
@@ -73,7 +73,7 @@ span.text-red {
   font-weight: 500;
 }
 .cart-icon {
-  font-size: 45px;
+  font-size: 35px;
   color: gray;
   cursor: pointer;
   position: relative;
@@ -165,19 +165,13 @@ span.text-red {
   margin-left: -20px;
   text-transform: uppercase;
 }
-
-.hero-banner-innerdiv {
-  position: relative;
-  z-index: 2;
-}
-
 .hero-banner-image {
   position: absolute;
-  top: -35%;
-  right: 10%;
+  top: 0%;
+  right: 8%;
   width: 450px;
   height: 450px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .desc {
@@ -624,64 +618,6 @@ span.text-red {
   margin-top: 10px;
 }
 
-.logo-name {
-  color: rgb(121, 196, 10);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-size: 24px;
-  position: absolute;
-  top: 20px;
-  left: 60px;
-}
-
-.privacy-policy {
-  text-align: justify;
-  width: 90%;
-  margin-top: 20px;
-}
-
-.privacy-policy > h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.privacy-policy > h2 {
-  font-size: 24px;
-  margin: 20px 0 10px;
-}
-
-.privacy-policy > p {
-  margin-bottom: 10px;
-}
-
-.privacy-policy > ul {
-  margin-bottom: 10px;
-}
-
-.privacy-policy > li {
-  margin-bottom: 5px;
-  list-style-type: disc;
-}
-
-.termsofservice {
-  margin-top: 20px;
-  line-height: 1.5;
-}
-
-.termsofservice > h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.termsofservice > h2 {
-  font-size: 20px;
-  margin: 20px 0 10px;
-}
-
-.termsofservice > p {
-  margin-bottom: 10px;
-}
-
 @media only screen and (max-width: 768px) {
   .beats-solo {
     margin-left: -20px;
@@ -844,32 +780,32 @@ span.text-red {
 }
 
 @media screen and (max-width: 500px) {
-  .hero-banner-image {
+  .hero-banner-image{
     width: 90%;
   }
-  .footer-banner-image {
+  .footer-banner-image{
     width: 80%;
     left: 20%;
   }
-  .cart-heading {
+  .cart-heading{
     margin-left: 70px;
   }
-  .empty-cart {
+  .empty-cart{
     margin-left: 70px;
   }
-  .product-container {
+  .product-container{
     margin-left: 45px;
   }
-  .small-images-container {
+  .small-images-container{
     width: 300px;
   }
-  .image-container {
+  .image-container{
     margin-left: -15px;
   }
-  .cart-bottom {
+  .cart-bottom{
     left: 4%;
   }
-  .banner-desc .left p {
+  .banner-desc .left p{
     margin-left: 1px;
   }
 }

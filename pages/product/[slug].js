@@ -26,7 +26,7 @@ export const ProductDetails = ({ product, products }) => {
         <div>
           <div className="image-container">
             <Image
-              src={urlFor(image && image[index]).size(400, 400).toString()}
+              src={urlFor(image && image[index]).toString()}
               alt="image of the current viewing product"
               className="product-detail-image"
               width={400}
@@ -38,7 +38,7 @@ export const ProductDetails = ({ product, products }) => {
             {image?.map((item, i) => (
               <Image
                 key={i}
-                src={urlFor(item).size(80, 80).url()}
+                src={urlFor(item).url()}
                 alt="Other Images of the Current Product"
                 onMouseEnter={() => setIndex(i)}
                 className={
