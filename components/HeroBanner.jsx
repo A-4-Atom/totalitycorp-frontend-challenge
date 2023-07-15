@@ -6,7 +6,7 @@ const HeroBanner = ({heroBanner}) => {
 
   return (
     <div className="hero-banner-container">
-      <div>
+      <div className="hero-banner-innerdiv">
         <p className="beats-solo">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
