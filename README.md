@@ -2,7 +2,7 @@
 
 Welcome to the documentation for the E-Commerce Website project built using Next.js, Sanity CMS, and Stripe API. This project showcases an online store with features like dynamic content management, product display, and secure payments.
 
-![Project Demo](https://totalitycorp-frontend-challenge-l2wmea6l2-a-4-atom.vercel.app/)
+[Project Demo](https://totalitycorp-frontend-challenge-l2wmea6l2-a-4-atom.vercel.app/)
 
 ## Table of Contents
 
